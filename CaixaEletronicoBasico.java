@@ -19,11 +19,17 @@ public class CaixaEletronicoBasico {
 		System.out.println("-------------------------");
 
 		double deposito = 500.00;
-
 		double saldo = deposito + saldoInicial;
 
 		System.out.printf("Valor depositado: R$ %.2f%n", deposito);
 		System.out.printf("Saldo: %.2f%n", saldo);
+		System.out.println("-------------------------");
+
+		double taxaDeManutencao = 45.50;
+		double saldoTaxa = saldo - taxaDeManutencao;
+
+		System.out.printf("Taxa de manutenção: R$ %.2f%n", taxaDeManutencao);
+		System.out.printf("Saldo: R$ %.2f%n", saldoTaxa);
 
 	}
 }
