@@ -18,5 +18,12 @@ public class CaixaEletronicoBasico {
 		System.out.println("Conta ativa? " + conta);
 		System.out.println("-------------------------");
 
+		double deposito = 500.00;
+
+		double saldo = deposito + saldoInicial;
+
+		System.out.printf("Valor depositado: R$ %.2f%n", deposito);
+		System.out.printf("Saldo: %.2f%n", saldo);
+
 	}
 }
