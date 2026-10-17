@@ -9,27 +9,37 @@ public class CaixaEletronicoBasico {
 
 		String titular = "João Vitor";
 		long numeroConta = 292104190107L;
-		double saldoInicial = 4350.26;
+		double saldo = 4350.26;
 		boolean conta = true;
 
 		System.out.println("Titular: " + titular);
 		System.out.println("Número da conta: " + numeroConta);
-		System.out.printf("Saldo: %.2f%n", saldoInicial);
+		System.out.printf("Saldo: %.2f%n", saldo);
 		System.out.println("Conta ativa? " + conta);
 		System.out.println("-------------------------");
 
 		double deposito = 500.00;
-		double saldo = deposito + saldoInicial;
+		saldo += deposito;
 
 		System.out.printf("Valor depositado: R$ %.2f%n", deposito);
 		System.out.printf("Saldo: %.2f%n", saldo);
 		System.out.println("-------------------------");
 
 		double taxaDeManutencao = 45.50;
-		double saldoTaxa = saldo - taxaDeManutencao;
+		saldo -= taxaDeManutencao;
 
 		System.out.printf("Taxa de manutenção: R$ %.2f%n", taxaDeManutencao);
-		System.out.printf("Saldo: R$ %.2f%n", saldoTaxa);
+		System.out.printf("Saldo: R$ %.2f%n", saldo);
+		System.out.println("-------------------------");
+
+		double cotacaoDolar = 5.07;
+		double saldoEmDolar = saldo / cotacaoDolar;
+		int saqueDolar = (int) saldoEmDolar;
+
+		System.out.printf("Cotação do dólar: R$ %.2f%n", cotacaoDolar);
+		System.out.printf("Saldo em dolares (preciso): R$ %.2f%n", saldoEmDolar);
+		System.out.println("Saldo em dolares (inteiro) para saque: R$ " + saqueDolar);
+		System.out.println("-------------------------");
 
 	}
 }
